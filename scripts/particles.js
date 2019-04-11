@@ -118,43 +118,43 @@
       },
       sceneFrameBehavior: null
     },{
-      name: 'Spooky Ghosts',
-      particleCount: 5000,
-      material: new THREE.PointCloudMaterial({
-        size: 16,
-        map: THREE.ImageUtils.loadTexture("http://matthewachase.com/tru-dat-boo.png"),
-        blending: THREE.AdditiveBlending,
-        transparent: true,
-        depthTest: false
-      }),
-      initialize: function(){
-        camera.position.y = 50;
-        camera.position.z = 200;
+      // name: 'Spooky Ghosts',
+      // particleCount: 5000,
+      // material: new THREE.PointCloudMaterial({
+      //   size: 16,
+      //   map: THREE.ImageUtils.loadTexture("http://matthewachase.com/tru-dat-boo.png"),
+      //   blending: THREE.AdditiveBlending,
+      //   transparent: true,
+      //   depthTest: false
+      // }),
+      // initialize: function(){
+      //   camera.position.y = 50;
+      //   camera.position.z = 200;
         
-        pointCloud.sortParticles = true;
-      },
-      spawnBehavior: function(index){
-        var x, y, z;
-        var halfWidth = width / 2;
+      //   pointCloud.sortParticles = true;
+      // },
+      // spawnBehavior: function(index){
+      //   var x, y, z;
+      //   var halfWidth = width / 2;
         
-        x = (Math.random() * width) - halfWidth;
-        y = (Math.random() * width) - halfWidth;
-        z = (Math.random() * width) - halfWidth;
-        var v = new THREE.Vector3(x, y, z);
-        v.velocity = new THREE.Vector3(0,0,0);
+      //   x = (Math.random() * width) - halfWidth;
+      //   y = (Math.random() * width) - halfWidth;
+      //   z = (Math.random() * width) - halfWidth;
+      //   var v = new THREE.Vector3(x, y, z);
+      //   v.velocity = new THREE.Vector3(0,0,0);
         
-        return v;
-      },
-      frameBehavior: function(particle, index){
-        function push(){
-          return (Math.random() * 0.125) - 0.0625;
-        }
+      //   return v;
+      // },
+      // frameBehavior: function(particle, index){
+      //   function push(){
+      //     return (Math.random() * 0.125) - 0.0625;
+      //   }
         
-        particle.add(particle.velocity);
-        particle.velocity.add(new THREE.Vector3(push(), push(), push()));
-        particle.velocity.add(new THREE.Vector3(particle.x, particle.y, particle.z).multiplyScalar(-0.00001));
-      },
-      sceneFrameBehavior: null
+      //   particle.add(particle.velocity);
+      //   particle.velocity.add(new THREE.Vector3(push(), push(), push()));
+      //   particle.velocity.add(new THREE.Vector3(particle.x, particle.y, particle.z).multiplyScalar(-0.00001));
+      // },
+      // sceneFrameBehavior: null
     }];
     
     function onDocumentReady(){
