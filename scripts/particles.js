@@ -14,7 +14,7 @@
       material: new THREE.PointCloudMaterial({ 
         size: 1, 
         // color: 0xffffff,
-        color: '#1565c0',
+        color: '#00649d',
         transparent: true,
         opacity: 0.9
       }),
