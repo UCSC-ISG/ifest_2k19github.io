@@ -177,7 +177,8 @@
     function initialize(){
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera(120, width / height, 1, 1000);
-      renderer = new THREE.WebGLRenderer();
+      renderer = new THREE.WebGLRenderer({alpha: true});
+      // renderer.setClearColor( '#242424', 0 );
       document.body.appendChild(renderer.domElement);
       window.addEventListener('resize', onWindowResize);
       onWindowResize();
